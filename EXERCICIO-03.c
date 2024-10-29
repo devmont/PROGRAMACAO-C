@@ -1,13 +1,9 @@
 #include <stdio.h>
 
 /*
-
 Objetivo: Ler dados de clientes de um banco e calcular o cliente com maior e menor saldo e quantos têm saldo abaixo da média.
-
 Entradas: Número de clientes (<= 50), número da conta e saldo de cada cliente.
-
 Saída: Conta e cliente com maior saldo, conta e cliente com menor saldo, e quantidade de clientes com saldo abaixo da média. 
-
 */
 
 #define MAX_CLIENTES 50
@@ -38,11 +34,7 @@ int main(){
         printf("digite o saldo atual do cliente %d: R$ ", i + 1);
         scanf("%f", &saldos[i]);
 
-        //acumular saldo total
-
         saldoTotal += saldos[i];
-
-        //atualizar o indide de maior e menor saldo
 
         if (saldos[i] > saldos[maiorSaldoIdx]){
             maiorSaldoIdx = i;
