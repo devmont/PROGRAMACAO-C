@@ -7,8 +7,8 @@ Entradas: Fabricante do carro, Valor de aquisição do carro
 Saídas: Mensagem de confirmação de cadastro, Listagem dos carros de um fabricante específico, ou mensagem caso o fabricante não tenha carros cadastrados
 */
 
-
-#define MAX_CARROS 200  // Diretiva de substituição para o limite máximo de carros
+// Diretiva de substituição para o limite máximo de carros
+#define MAX_CARROS 200  
 
 // Estrutura para armazenar os dados dos carros
 typedef struct {
