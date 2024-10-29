@@ -4,8 +4,9 @@
 
 
 /*
-Objetivo: Desenvolver um programa para o Instituto Nacional de Meteorologia que coleta dados de chuva de várias cidades em fevereiro e permite buscar dias em que uma quantidade específica de chuva ocorreu.
-Entradas: Ano do levantamento, Número de cidades e dias coletados, Nome da cidade (string), Quantidade de chuva (float)
+Objetivo: Desenvolver um programa para o Instituto Nacional de Meteorologia que coleta dados de chuva de várias 
+cidades em fevereiro e permite buscar dias em que uma quantidade específica de chuva ocorreu.
+Entradas: Ano do levantamento, Número de cidades e dias coletados, Nome da cidade, Quantidade de chuva
 Saídas: Número de dias em fevereiro (28 ou 29), Nome da cidade e dias que tiveram uma quantidade específica de chuva
 */
 
