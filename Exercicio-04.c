@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_ALUNOS 500
-
 /*
 Objetivo: Gerenciar os dados de até 500 alunos em uma disciplina, fornecendo funcionalidades para leitura, cálculo de média, ordenação e apresentação de alunos aprovados/reprovados.
 Entradas: Matrícula, Percentual de faltas, Nota.
 Saídas: Média da classe, Alunos aprovados e reprovados, Listagem dos alunos, ordenados por matrícula ou nota.
 
 */
+
+#define MAX_ALUNOS 500
 
 // Estrutura para armazenar os dados dos alunos
 typedef struct {
@@ -28,6 +28,7 @@ void apresentarAlunosPorNota(Aluno alunos[], int numAlunos);
 void ordenarPorMatricula(Aluno alunos[], int numAlunos);
 void ordenarPorNota(Aluno alunos[], int numAlunos);
 
+// Função principal que apresenta o menu e aciona as funções
 int main() {
     Aluno alunos[MAX_ALUNOS];
     int numAlunos = 0;
@@ -125,7 +126,7 @@ void apresentarAlunosPorMatricula(Aluno alunos[], int numAlunos) {
 void apresentarAlunosReprovados(Aluno alunos[], int numAlunos) {
     printf("\nAlunos reprovados:\n");
     for (int i = 0; i < numAlunos; i++) {
-        if (alunos[i].nota < 6.0 || alunos[i].percentualFaltas > 25.0) {
+        if (alunos[i].nota <= 7.0 || alunos[i].percentualFaltas >= 25.0) {
             printf("Matricula: %d, Faltas: %.2f%%, Nota: %.2f\n", 
                    alunos[i].matricula, alunos[i].percentualFaltas, alunos[i].nota);
         }
@@ -136,7 +137,7 @@ void apresentarAlunosReprovados(Aluno alunos[], int numAlunos) {
 void apresentarAlunosAprovados(Aluno alunos[], int numAlunos) {
     printf("\nAlunos aprovados:\n");
     for (int i = 0; i < numAlunos; i++) {
-        if (alunos[i].nota >= 6.0 && alunos[i].percentualFaltas <= 25.0) {
+        if (alunos[i].nota > 7.0 && alunos[i].percentualFaltas < 25.0) {
             printf("Matricula: %d, Faltas: %.2f%%, Nota: %.2f\n", 
                    alunos[i].matricula, alunos[i].percentualFaltas, alunos[i].nota);
         }
@@ -179,3 +180,4 @@ void ordenarPorNota(Aluno alunos[], int numAlunos) {
         }
     }
 }
+
