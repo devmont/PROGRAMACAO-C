@@ -153,7 +153,7 @@ void apresentarAlunosPorNota(Aluno alunos[], int numAlunos) {
     }
 }
 
-// Função para ordenar os alunos por matrícula (Bubble Sort)
+// Função para ordenar os alunos por matrícula
 void ordenarPorMatricula(Aluno alunos[], int numAlunos) {
     Aluno temp;
     for (int i = 0; i < numAlunos - 1; i++) {
@@ -167,7 +167,7 @@ void ordenarPorMatricula(Aluno alunos[], int numAlunos) {
     }
 }
 
-// Função para ordenar os alunos por nota (Bubble Sort)
+// Função para ordenar os alunos por nota
 void ordenarPorNota(Aluno alunos[], int numAlunos) {
     Aluno temp;
     for (int i = 0; i < numAlunos - 1; i++) {
