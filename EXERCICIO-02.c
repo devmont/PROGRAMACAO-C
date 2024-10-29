@@ -4,14 +4,11 @@
 // Entradas: Idade e índice de satisfação (entre 5 e 10), sendo 999 o valor para encerrar a entrada.
 // Saída: Exibe as médias de idade e satisfação, além dos percentuais de satisfação 5, 10 e abaixo de 7.
 
-// Definindo que aqui começam as variáveis
 int main() {
-    // Variáveis
     int idade, totalPessoas = 0;
     float indice, somaIdade = 0, somaIndice = 0;
     int satisfacao5 = 0, satisfacao10 = 0, abaixoDe7 = 0;
 
-    // Estrutura de repetição para coleta de dados até que a idade 999 seja informada
     do {
         printf("Digite a idade (999 para encerrar): ");
         scanf("%d", &idade);
@@ -26,19 +23,19 @@ int main() {
                 }
             } while (indice < 5 || indice > 10);
 
-            // Atualizando os totais
             totalPessoas++;
             somaIdade += idade;
             somaIndice += indice;
 
-            // Contabilizando as respostas de satisfação específicas
+            // Contabilizando as respostas de satisfação
             if (indice == 5) satisfacao5++;
             if (indice == 10) satisfacao10++;
             if (indice < 7) abaixoDe7++;
         }
     } while (idade != 999);
 
-    // Verificação para evitar divisão por zero caso nenhuma pessoa seja entrevistada
+       // Verificação para evitar divisão por zero caso nenhuma pessoa seja entrevistada
+    
     if (totalPessoas > 0) {
         float mediaIdade = somaIdade / totalPessoas;
         float mediaIndice = somaIndice / totalPessoas;
